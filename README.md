@@ -1,3 +1,4 @@
+```shell
 conda create -n rag-venv python==3.10.18
 conda config --add channels https://mirrors.tuna.tsinghua.edu.cn/anaconda/cloud/nvidia
 conda config --add channels https://mirrors.tuna.tsinghua.edu.cn/anaconda/cloud/pytorch
@@ -6,13 +7,14 @@ conda config --add channels https://mirrors.tuna.tsinghua.edu.cn/anaconda/cloud/
 conda config --set proxy_servers.http http://188.37.67.19:2265
 conda config --set proxy_servers.https http://188.37.67.19:2265
 
-** CUDA 12.4/nvidia driver 555 **
+# CUDA 12.4/nvidia driver 555
 conda install pytorch==2.5.0 torchvision==0.20.0 torchaudio==2.5.0 pytorch-cuda=12.4 -c pytorch -c nvidia
 
 pip install cn-clip clip-server FlagEmbedding -i https://pypi.tuna.tsinghua.edu.cn/simple
 
 https://github.com/FlagOpen/FlagEmbedding
 https://github.com/jina-ai/clip-as-service
+```
 
 
 [**中文说明**](README.md) | [**English**](README_En.md)
@@ -595,5 +597,6 @@ zeroshot-top1: 0.6444
   year={2022}
 }
 ```
+
 
 
