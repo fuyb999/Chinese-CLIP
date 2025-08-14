@@ -6,8 +6,8 @@ conda config --add channels https://mirrors.tuna.tsinghua.edu.cn/anaconda/cloud/
 conda config --set proxy_servers.http http://188.37.67.19:2265
 conda config --set proxy_servers.https http://188.37.67.19:2265
 
-conda install pytorch==1.13.1 torchvision==0.14.1 torchaudio==0.13.1 pytorch-cuda=11.7 -c pytorch -c nvidia
-
+** CUDA 12.4/nvidia driver 555 **
+conda install pytorch==2.5.0 torchvision==0.20.0 torchaudio==2.5.0 pytorch-cuda=12.4 -c pytorch -c nvidia
 
 pip install cn-clip clip-server FlagEmbedding -i https://pypi.tuna.tsinghua.edu.cn/simple
 
@@ -595,4 +595,5 @@ zeroshot-top1: 0.6444
   year={2022}
 }
 ```
+
 
