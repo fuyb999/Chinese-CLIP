@@ -37,7 +37,7 @@ pip install "paddlex[cv]"
 pip install "paddlex[ocr]"
 pip install opencv-python-headless
 mkdir -p /home/develop/.conda/envs/paddlex-venv/lib/python3.10/site-packages/paddlex/repo_manager/repos
-paddlex --install PaddleOCR PaddleClas
+paddlex --install PaddleOCR PaddleClas serving
 
 ```
 
@@ -622,6 +622,7 @@ zeroshot-top1: 0.6444
   year={2022}
 }
 ```
+
 
 
 
