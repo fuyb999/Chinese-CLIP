@@ -11,7 +11,20 @@ conda config --set proxy_servers.https http://188.37.67.19:2265
 conda install pytorch==2.5.0 torchvision==0.20.0 torchaudio==2.5.0 pytorch-cuda=12.4 -c pytorch -c nvidia
 
 pip install cn-clip clip-server FlagEmbedding -i https://pypi.tuna.tsinghua.edu.cn/simple
+
+
+# paddlex
+conda install pytorch==2.6.0  pytorch-cuda=12.4 -c pytorch -c nvidia
+pip install torchvision==0.21.0 torchaudio==2.6.0 --index-url https://download.pytorch.org/whl/cu124
 pip install paddlepaddle-gpu==3.0.0 -i https://www.paddlepaddle.org.cn/packages/stable/cu126
+python -c "import paddle; print(paddle.__version__)"
+
+pip install "paddlex[base]"
+pip install "paddlex[cv]"
+pip install "paddlex[ocr]"
+pip install opencv-python-headless
+mkdir -p /home/develop/.conda/envs/paddlex-venv/lib/python3.10/site-packages/paddlex/repo_manager/repos
+paddlex --install PaddleOCR PaddleClas
 
 ```
 
@@ -596,6 +609,7 @@ zeroshot-top1: 0.6444
   year={2022}
 }
 ```
+
 
 
 
