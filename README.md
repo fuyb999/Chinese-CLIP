@@ -39,6 +39,26 @@ pip install opencv-python-headless
 mkdir -p /home/develop/.conda/envs/paddlex-venv/lib/python3.10/site-packages/paddlex/repo_manager/repos
 paddlex --install PaddleOCR PaddleClas serving
 
+# test 服务化
+paddlex --serve --pipeline OCR
+
+
+from paddlex import create_pipeline
+
+pipeline = create_pipeline(pipeline="OCR")
+
+output = pipeline.predict(
+    input="https://raw.githubusercontent.com/cuicheng01/PaddleX_doc_images/main/images/pipelines/ocr/03.png",
+    use_doc_orientation_classify=False,
+    use_doc_unwarping=False,
+    use_textline_orientation=False,
+)
+
+for res in output:
+    res.print()
+    res.save_to_img(save_path="./output/")
+    res.save_to_json(save_path="./output/")
+
 ```
 
 
@@ -622,6 +642,7 @@ zeroshot-top1: 0.6444
   year={2022}
 }
 ```
+
 
 
 
