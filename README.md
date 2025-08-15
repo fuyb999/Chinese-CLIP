@@ -13,8 +13,6 @@ conda install pytorch==2.5.0 torchvision==0.20.0 torchaudio==2.5.0 pytorch-cuda=
 pip install cn-clip clip-server FlagEmbedding -i https://pypi.tuna.tsinghua.edu.cn/simple
 pip install paddlepaddle-gpu==3.0.0 -i https://www.paddlepaddle.org.cn/packages/stable/cu126
 
-https://github.com/FlagOpen/FlagEmbedding
-https://github.com/jina-ai/clip-as-service
 ```
 
 
@@ -598,6 +596,7 @@ zeroshot-top1: 0.6444
   year={2022}
 }
 ```
+
 
 
 
