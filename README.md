@@ -14,9 +14,22 @@ pip install cn-clip clip-server FlagEmbedding -i https://pypi.tuna.tsinghua.edu.
 
 
 # paddlex
+
 conda install pytorch==2.6.0  pytorch-cuda=12.4 -c pytorch -c nvidia
 pip install torchvision==0.21.0 torchaudio==2.6.0 --index-url https://download.pytorch.org/whl/cu124
 pip install paddlepaddle-gpu==3.0.0 -i https://www.paddlepaddle.org.cn/packages/stable/cu126
+
+wget https://us.download.nvidia.com/XFree86/Linux-x86_64/550.54.14/NVIDIA-Linux-x86_64-550.54.14.run
+sudo ./NVIDIA-Linux-x86_64-550.54.14.run \
+       --silent \
+       --no-kernel-module \
+       --install-compat32-libs \
+       --no-nouveau-check \
+       --no-nvidia-modprobe \
+       --no-rpms \
+       --no-backup \
+       --no-check-for-alternate-installs
+
 python -c "import paddle; print(paddle.__version__)"
 
 pip install "paddlex[base]"
@@ -609,6 +622,7 @@ zeroshot-top1: 0.6444
   year={2022}
 }
 ```
+
 
 
 
