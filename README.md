@@ -48,7 +48,7 @@ paddlex --install PaddleOCR PaddleClas serving
 # test 服务化
 paddlex --serve --pipeline OCR
 
-
+# test ocr
 from paddlex import create_pipeline
 
 pipeline = create_pipeline(pipeline="OCR")
@@ -648,6 +648,7 @@ zeroshot-top1: 0.6444
   year={2022}
 }
 ```
+
 
 
 
